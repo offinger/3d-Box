@@ -1,0 +1,161 @@
+body {
+  background-image: url(bg.jpg);
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  -webkit-text-size-adjust: none;
+  color: #333;
+}
+
+#show-buttons { width: 380px; position: relative; margin-right: auto; margin-left: auto; }
+
+.container {
+      margin-right: auto;
+      top: 100px;
+      border-style: none;
+      margin-left: auto;
+      width: 500px;
+      height: 500px;
+      position: relative;
+      -webkit-perspective: 1000px;
+         -moz-perspective: 1000px;
+          -ms-perspective: 1000px;
+           -o-perspective: 1000px;
+              perspective: 1000px;
+    }
+    
+    #cube {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+          -ms-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-transition: -webkit-transform 1s;
+         -moz-transition: -moz-transform 1s;
+          -ms-transition: -ms-transform 1s;
+           -o-transition: -o-transform 1s;
+              transition: transform 1s;
+    }
+    
+    #cube figure {
+      text-align: left;
+      display: block;
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      border: 2px solid white;
+      font-size: 12px;
+      color: white;
+    }
+    
+    #cube.panels-backface-invisible figure {
+      -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+          -ms-backface-visibility: hidden;
+           -o-backface-visibility: hidden;
+              backface-visibility: hidden;
+    }
+    
+    #cube .front  { background: hsla(   87, 9%, 9%, 0.7 ); }
+    #cube .back   { background: hsla(  87, 9%, 9%, 0.7 ); }
+    #cube .right  { background: hsla( 87, 9%, 9%, 0.7 ); }
+    #cube .left   { background: hsla( 87, 9%, 9%, 0.7 ); }
+    #cube .top    { background: hsla( 87, 9%, 9%, 0.7 ); }
+    #cube .bottom { background: hsla( 87, 9%, 9%, 0.7 ); }
+
+    #cube .front  {
+      -webkit-transform: translateZ( 250px );
+         -moz-transform: translateZ( 250px );
+          -ms-transform: translateZ( 250px );
+           -o-transform: translateZ( 250px );
+              transform: translateZ( 250px );
+    }
+    #cube .back   {
+      -webkit-transform: rotateX( -180deg ) translateZ( 250px );
+         -moz-transform: rotateX( -180deg ) translateZ( 250px );
+          -ms-transform: rotateX( -180deg ) translateZ( 250px );
+           -o-transform: rotateX( -180deg ) translateZ( 250px );
+              transform: rotateX( -180deg ) translateZ( 250px );
+    }
+    #cube .right {
+      -webkit-transform: rotateY(   90deg ) translateZ( 250px );
+         -moz-transform: rotateY(   90deg ) translateZ( 250px );
+          -ms-transform: rotateY(   90deg ) translateZ( 250px );
+           -o-transform: rotateY(   90deg ) translateZ( 250px );
+              transform: rotateY(   90deg ) translateZ( 250px );
+    }
+    #cube .left {
+      -webkit-transform: rotateY(  -90deg ) translateZ( 250px );
+         -moz-transform: rotateY(  -90deg ) translateZ( 250px );
+          -ms-transform: rotateY(  -90deg ) translateZ( 250px );
+           -o-transform: rotateY(  -90deg ) translateZ( 250px );
+              transform: rotateY(  -90deg ) translateZ( 250px );
+    }
+    #cube .top {
+      -webkit-transform: rotateX(   90deg ) translateZ( 250px );
+         -moz-transform: rotateX(   90deg ) translateZ( 250px );
+          -ms-transform: rotateX(   90deg ) translateZ( 250px );
+           -o-transform: rotateX(   90deg ) translateZ( 250px );
+              transform: rotateX(   90deg ) translateZ( 250px );
+    }
+    #cube .bottom {
+      -webkit-transform: rotateX(  -90deg ) translateZ( 250px );
+         -moz-transform: rotateX(  -90deg ) translateZ( 250px );
+          -ms-transform: rotateX(  -90deg ) translateZ( 250px );
+           -o-transform: rotateX(  -90deg ) translateZ( 250px );
+              transform: rotateX(  -90deg ) translateZ( 250px );
+    }
+    
+    #cube.show-front {
+      -webkit-transform: translateZ( -250px );
+         -moz-transform: translateZ( -250px );
+          -ms-transform: translateZ( -250px );
+           -o-transform: translateZ( -250px );
+              transform: translateZ( -250px );
+    }
+    #cube.show-back {
+      -webkit-transform: translateZ( -250px ) rotateX( -180deg );
+         -moz-transform: translateZ( -250px ) rotateX( -180deg );
+          -ms-transform: translateZ( -250px ) rotateX( -180deg );
+           -o-transform: translateZ( -250px ) rotateX( -180deg );
+              transform: translateZ( -250px ) rotateX( -180deg );
+    }
+    #cube.show-right {
+      -webkit-transform: translateZ( -250px ) rotateY(  -90deg );
+         -moz-transform: translateZ( -250px ) rotateY(  -90deg );
+          -ms-transform: translateZ( -250px ) rotateY(  -90deg );
+           -o-transform: translateZ( -250px ) rotateY(  -90deg );
+              transform: translateZ( -250px ) rotateY(  -90deg );
+    }
+    #cube.show-left {
+      -webkit-transform: translateZ( -250px ) rotateY(   90deg );
+         -moz-transform: translateZ( -250px ) rotateY(   90deg );
+          -ms-transform: translateZ( -250px ) rotateY(   90deg );
+           -o-transform: translateZ( -250px ) rotateY(   90deg );
+              transform: translateZ( -250px ) rotateY(   90deg );
+    }
+    #cube.show-top {
+      -webkit-transform: translateZ( -250px ) rotateX(  -90deg );
+         -moz-transform: translateZ( -250px ) rotateX(  -90deg );
+          -ms-transform: translateZ( -250px ) rotateX(  -90deg );
+           -o-transform: translateZ( -250px ) rotateX(  -90deg );
+              transform: translateZ( -250px ) rotateX(  -90deg );
+    }
+    #cube.show-bottom {
+      -webkit-transform: translateZ( -250px ) rotateX(   90deg );
+         -moz-transform: translateZ( -250px ) rotateX(   90deg );
+          -ms-transform: translateZ( -250px ) rotateX(   90deg );
+           -o-transform: translateZ( -250px ) rotateX(   90deg );
+              transform: translateZ( -250px ) rotateX(   90deg );
+    }
+    #bash {
+    	padding-top: 3px;
+    	color: black;
+    	text-align: center;
+    	background-image: url(siva.png);
+    	background-repeat: repeat-x;
+    	width: 500px;
+    	height: 22px;
+    }
+    
